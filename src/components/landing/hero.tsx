@@ -33,7 +33,7 @@ export default function Hero() {
             {/* Background Effects */}
             <div className="background-container">
                 <div className="radial-glow"></div>
-                <div className="particles" id="particles"></div>
+                {/* <div className="particles" id="particles"></div> */}
             </div>
 
             {/* Hero Section */}

@@ -1,0 +1,369 @@
+@import url("https://fonts.cdnfonts.com/css/trajan-pro");
+
+/* Main Section */
+
+.about-section {
+  background: #0a0e27;
+  color: white;
+
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+/* Top Fade Overlay */
+.about-section::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 180px;   /* fade height */
+
+  background: linear-gradient(
+    to bottom,
+    rgba(8, 14, 28, 1) 0%,
+    rgba(8, 14, 28, 0.8) 30%,
+    rgba(8, 14, 28, 0.4) 60%,
+    rgba(8, 14, 28, 0) 100%
+  );
+
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Bottom Fade Overlay */
+.about-section::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 180px;   /* fade height */
+
+  background: linear-gradient(
+    to top,
+    rgba(8, 14, 28, 1) 0%,
+    rgba(8, 14, 28, 0.8) 30%,
+    rgba(8, 14, 28, 0.4) 60%,
+    rgba(8, 14, 28, 0) 100%
+  );
+
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Animated Particles */
+
+.about-particles {
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.about-particle {
+    position: absolute;
+
+    width: 4px;
+    height: 4px;
+
+    background: #4fc3f7;
+    border-radius: 50%;
+
+    opacity: 0.6;
+
+    box-shadow:
+        0 0 6px #4fc3f7,
+        0 0 12px rgba(79, 195, 247, 0.6);
+
+    animation:
+        floatParticle 10s ease-in-out infinite,
+        glowParticle 3s ease-in-out infinite;
+}
+
+@keyframes floatParticle {
+    0% {
+        transform: translateY(0px) translateX(0px);
+    }
+
+    50% {
+        transform: translateY(-15px) translateX(10px);
+    }
+
+    100% {
+        transform: translateY(0px) translateX(0px);
+    }
+}
+
+@keyframes glowParticle {
+
+    0%,
+    100% {
+        opacity: 0.4;
+        box-shadow:
+            0 0 6px #4fc3f7,
+            0 0 12px rgba(79, 195, 247, 0.5);
+    }
+
+    50% {
+        opacity: 0.9;
+        box-shadow:
+            0 0 12px #4fc3f7,
+            0 0 25px rgba(79, 195, 247, 0.9);
+    }
+}
+
+/* Container */
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Title */
+
+.title-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main-title {
+    font-family: "Trajan Pro 3", "Trajan Pro", serif;
+    font-weight: 600;
+    font-size: 42px;
+    letter-spacing: 0.04em;
+    margin-bottom: 15px;
+}
+
+.version {
+    color: #4fc3f7;
+}
+
+.title-underline {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,
+            rgba(153, 153, 153, 0.1) 0%,
+            #ffffff 50%,
+            rgba(153, 153, 153, 0.1) 100%);
+}
+
+/* Content */
+
+.content-section {
+    display: flex;
+    align-items: center;
+    z-index: 0;
+}
+
+.content-section::before {
+    content: "";
+    position: absolute;
+    inset: -50px;
+
+    background: radial-gradient(circle,
+            rgba(79, 195, 247, 0.15),
+            transparent 70%);
+
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Image */
+
+.image-container {
+    flex: 0 0 500px;
+    /* margin-right: -80px; */
+    z-index: 3;
+    position: relative;
+}
+
+.team-image {
+    width: 100%;
+    border-radius: 25px;
+
+    /* box-shadow:
+        0 0 30px rgba(79, 195, 247, 0.25),
+        0 20px 60px rgba(0, 0, 0, 0.4); */
+}
+
+/* Text */
+
+.text-container {
+    flex: 1;
+    position: relative;
+    padding: 60px 50px;
+    z-index: 1;
+    transform: skewX(-6deg);
+    margin-left: -40px;
+}
+
+.tilt-background {
+    position: absolute;
+    inset: 0;
+
+    border-radius: 30px;
+    background-image: url("/images/tilt_bg.png");
+    filter: brightness(200%);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* box-shadow:
+        0 0 40px rgba(79, 195, 247, 0.2),
+        inset 0 0 20px rgba(255, 255, 255, 0.05); */
+
+    transform: skewX(6deg);
+    z-index: 0;
+}
+
+.text-content {
+    margin-left: 40px;
+    margin-right: 20px;
+    position: relative;
+    z-index: 1;
+    transform: skewX(6deg);
+}
+
+.subtitle {
+    margin-top: 10px;
+    font-family: "Trajan Pro 3", "Trajan Pro", serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #4fc3f7;
+    text-transform: uppercase;
+}
+
+.subtitle span {
+    color: #ffffff;
+}
+
+.description {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: "Perpetua", "Georgia", serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    text-align: justify;
+}
+
+/* Stats */
+
+.stats-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.stat-card {
+    height: 250px;
+    scale: 1.2;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-1 {
+    background-image: url("/images/Frame_1.png");
+}
+
+.card-2 {
+    background-image: url("/images/Frame_2.png");
+}
+
+.card-3 {
+    background-image: url("/images/Frame_3.png");
+}
+
+.card-4 {
+    background-image: url("/images/Frame_4.png");
+}
+
+.stat-number {
+    font-family: "Trajan Pro 3", "Trajan Pro", serif;
+    font-size: 30px;
+    margin-bottom: 2px;
+    line-height: 0.7;
+    margin-left: 100px;
+}
+
+.stat-label {
+    font-family: "Trajan Pro 3", "Trajan Pro", serif;
+    font-size: 8px;
+    margin-top: 0;
+    line-height: 1.1;
+    text-align: center;
+    color: #e0e0e0;
+    margin-left: 100px;
+}
+
+/* Responsive */
+
+@media (max-width: 1024px) {
+    .content-section {
+        flex-direction: column;
+    }
+
+    .image-container {
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .stats-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .text-container {
+        transform: none;
+        margin-left: 0;
+    }
+
+    .text-content {
+        transform: none;
+    }
+
+    .tilt-background {
+        transform: none;
+    }
+
+}
+
+@media (max-width: 640px) {
+    .main-title {
+        font-size: 32px;
+    }
+
+    .image-container {
+        flex: 0 0 250px;
+    }
+
+    .subtitle {
+        font-size: 24px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .stats-section {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 40px 20px;
+    }
+}
