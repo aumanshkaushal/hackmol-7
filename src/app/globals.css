@@ -1,8 +1,43 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Trajan Pro 3";
+  src: url("/fonts/Trajan Pro 3 Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Trajan Pro 3";
+  src: url("/fonts/Trajan Pro 3 Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Perpetua";
+  src: url("/fonts/Perpetua Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Perpetua";
+  src: url("/fonts/Perpetua Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --font-trajan: "Trajan Pro 3", serif;
+  --font-perpetua: "Perpetua", serif;
 }
 
 @theme inline {
@@ -12,15 +47,15 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+.font-cinzel {
+  font-family: var(--font-cinzel), serif;
+}
+
+.font-cinzel-decorative {
+  font-family: var(--font-cinzel-decorative), serif;
 }
