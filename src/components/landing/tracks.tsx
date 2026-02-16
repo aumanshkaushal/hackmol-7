@@ -56,7 +56,7 @@ const tracksData: TrackData[] = [
   },
   {
     name: "WOMEN'S TRACK",
-    image: "/images/tracksWomensTrack.png",
+    image: "/images/tracksWomenTrack.png",
     variant: "side",
     prizes: [
       { label: "WINNER", amount: "10,000" },
