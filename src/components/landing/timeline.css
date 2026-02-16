@@ -256,6 +256,10 @@
     padding-bottom: 16px;
   }
 
+  .timeline-heading-rule {
+    width: 320px;
+  }
+
   .timeline-heading-title {
     font-size: 26px;
     padding: 0 16px;
@@ -281,15 +285,15 @@
   }
 
   .timeline-card-title {
-    font-size: 17px;
+    font-size: 22px;
   }
 
   .timeline-card-desc {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .timeline-card-date {
-    font-size: 11px;
+    font-size: 16px;
   }
 
   .timeline-card-bullet {
@@ -312,6 +316,11 @@
     padding: 24px 12px 40px;
   }
 
+  .timeline-heading-rule{
+    width: 240px;
+    
+  }
+
   .timeline-subheading-title {
     font-size: 18px;
     letter-spacing: 0.1em;
@@ -328,16 +337,16 @@
   }
 
   .timeline-card-title {
-    font-size: 14px;
+    font-size: 20px;
     letter-spacing: 0.12em;
   }
 
   .timeline-card-desc {
-    font-size: 11px;
+    font-size: 16px;
   }
 
   .timeline-card-date {
-    font-size: 10px;
+    font-size: 16px;
     margin-left: 0;
     margin-top: 8px;
     width: 100%;
